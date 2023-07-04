@@ -1,23 +1,27 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
-const prefixHello = "Olá, "
+const prefixHello = "Hello, "
 
 func Hello(name string, language string) string {
+
 	if name == "" {
-		name = "mundo"
+		name = "world"
 	}
-	if language == "spanish" {
+	if strings.ToLower(language) == "spanish" {
 		return "Hola, " + name
 	}
-	if language == "french" {
+	if strings.ToLower(language) == "french" {
 		return "Bonjour, " + name
 	}
 	return prefixHello + name
 }
 
 func main() {
-	fmt.Println(Hello("mundo", ""))
+	fmt.Println(Hello("world", ""))
 
 }

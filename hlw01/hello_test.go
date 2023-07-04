@@ -14,14 +14,14 @@ func TestHello(t *testing.T) {
 	}
 	t.Run(" expected to say hello with name", func(t *testing.T) {
 		result := Hello("Gabriel", "")
-		expected := "Olá, Gabriel"
+		expected := "Hello, Gabriel"
 
 		verifyCorrectAnswer(t, result, expected)
 	})
 
 	t.Run("Expected to say Hello World if receives a empty string", func(t *testing.T) {
 		result := Hello("", "")
-		expected := "Olá, mundo"
+		expected := "Hello, world"
 
 		verifyCorrectAnswer(t, result, expected)
 
